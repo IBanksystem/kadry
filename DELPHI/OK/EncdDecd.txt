@@ -1,0 +1,46 @@
+uses
+  EncdDecd;
+ 
+//Содержимое файла закодировать в Base64 и записать в Memo.
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  Fs : TFileStream;
+  S : AnsiString;
+  FileName : String;
+begin
+  FileName := ExtractFilePath(ParamStr(0)) + 'image_in.jpg';
+  if not FileExists(FileName) then
+  begin
+    MessageBox(Handle, 'Файл с заданным именем не найден. Действие отменено.',
+      'Файл не найден', MB_OK + MB_ICONEXCLAMATION + MB_APPLMODAL);
+    Exit;
+  end;
+ 
+  Fs := TFileStream.Create(FileName, fmOpenRead + fmShareDenyWrite);
+  try
+    SetLength(S, Fs.Size);
+    Fs.Read(S[1], Fs.Size);
+  finally
+    FreeAndNil(Fs);
+  end;
+ 
+  Memo1.Text := EncodeString(S);
+end;
+ 
+//Содержимое Memo раскодировать из Base64 и записать в файл.
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  Fs : TFileStream;
+  S : AnsiString;
+  FileName : String;
+begin
+  FileName := ExtractFilePath(ParamStr(0)) + 'image_out.jpg';
+  Fs := TFileStream.Create(FileName, fmCreate);
+  S := DecodeString( Trim(Memo1.Text) );
+  try
+    Fs.Write(S[1], Length(S));
+  finally
+    FreeAndNil(Fs);
+  end;
+end;
+
