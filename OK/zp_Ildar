@@ -1,0 +1,1806 @@
+----------------------------------
+Timestamp: 16:24:02.218
+
+select p.tabno tabno, substr(p.family||' '||p.first_name||' '||p.patronymic,1,80) fio, p.gender_code, p.birthday, 
+p.pass_seriya||' '||p.pass_num pass_sn, substr(p.home_addressfact,1,80) home_addressfact, substr(p.home_address,1,80) 
+home_address, substr(p.telefon,1,16) telefon, p.inn, p.nps_id, per.in_office_date, per.basis_num, p.department_code, 
+p.post_code, p.special_code from ok_personal p, ok_period per where p.branch=info.getbranch and per.branch=p.branch and 
+p.STATUS_CODE in (2,5) and per.personal_code=p.personal_code and per.in_office_date = (select /*+ index(per2 OK_PERIOD_PK)*/ 
+per2.in_office_date from ok_period per2 where per2.branch=p.branch and per2.personal_code=p.personal_code and 
+TYPE_PERIOD_CODE=3 and rownum=1) order by p.id
+
+----------------------------------
+Timestamp: 16:24:02.562
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 48
+----------------------------------
+Timestamp: 16:24:02.687
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 32
+----------------------------------
+Timestamp: 16:24:02.765
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 50
+----------------------------------
+Timestamp: 16:24:02.828
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 35
+----------------------------------
+Timestamp: 16:24:02.906
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:03.015
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 46
+----------------------------------
+Timestamp: 16:24:03.125
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 12
+----------------------------------
+Timestamp: 16:24:03.187
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 47
+----------------------------------
+Timestamp: 16:24:03.265
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 57
+----------------------------------
+Timestamp: 16:24:03.328
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 49
+----------------------------------
+Timestamp: 16:24:03.390
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 46
+----------------------------------
+Timestamp: 16:24:03.578
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 51
+----------------------------------
+Timestamp: 16:24:03.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:03.734
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 2
+----------------------------------
+Timestamp: 16:24:03.796
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:03.875
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 3
+----------------------------------
+Timestamp: 16:24:03.937
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 18
+----------------------------------
+Timestamp: 16:24:03.953
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 52
+----------------------------------
+Timestamp: 16:24:03.984
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 21
+----------------------------------
+Timestamp: 16:24:04.000
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 53
+----------------------------------
+Timestamp: 16:24:04.015
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 14
+----------------------------------
+Timestamp: 16:24:04.046
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 54
+----------------------------------
+Timestamp: 16:24:04.062
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 25
+----------------------------------
+Timestamp: 16:24:04.140
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 55
+----------------------------------
+Timestamp: 16:24:04.312
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 30
+----------------------------------
+Timestamp: 16:24:04.562
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 58
+----------------------------------
+Timestamp: 16:24:04.578
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 40
+----------------------------------
+Timestamp: 16:24:04.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 59
+----------------------------------
+Timestamp: 16:24:04.625
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 40
+----------------------------------
+Timestamp: 16:24:04.640
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 60
+----------------------------------
+Timestamp: 16:24:04.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 18
+----------------------------------
+Timestamp: 16:24:04.671
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 61
+----------------------------------
+Timestamp: 16:24:04.687
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 6
+----------------------------------
+Timestamp: 16:24:04.703
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 62
+----------------------------------
+Timestamp: 16:24:04.718
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:04.734
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 63
+----------------------------------
+Timestamp: 16:24:04.765
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:04.781
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 64
+----------------------------------
+Timestamp: 16:24:04.796
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 14
+----------------------------------
+Timestamp: 16:24:04.812
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 65
+----------------------------------
+Timestamp: 16:24:04.828
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:04.843
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 66
+----------------------------------
+Timestamp: 16:24:04.859
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 5
+----------------------------------
+Timestamp: 16:24:04.890
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 67
+----------------------------------
+Timestamp: 16:24:04.906
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 11
+----------------------------------
+Timestamp: 16:24:04.921
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 68
+----------------------------------
+Timestamp: 16:24:04.937
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 22
+----------------------------------
+Timestamp: 16:24:04.953
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 69
+----------------------------------
+Timestamp: 16:24:04.968
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:04.984
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 70
+----------------------------------
+Timestamp: 16:24:05.000
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 55
+----------------------------------
+Timestamp: 16:24:05.031
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 71
+----------------------------------
+Timestamp: 16:24:05.062
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 7
+----------------------------------
+Timestamp: 16:24:05.265
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 74
+----------------------------------
+Timestamp: 16:24:05.546
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:05.562
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 76
+----------------------------------
+Timestamp: 16:24:05.593
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:05.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 78
+----------------------------------
+Timestamp: 16:24:05.625
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:05.640
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 79
+----------------------------------
+Timestamp: 16:24:05.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:05.671
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 80
+----------------------------------
+Timestamp: 16:24:05.687
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 47
+----------------------------------
+Timestamp: 16:24:05.796
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 82
+----------------------------------
+Timestamp: 16:24:05.921
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:06.078
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 83
+----------------------------------
+Timestamp: 16:24:06.250
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:06.359
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 84
+----------------------------------
+Timestamp: 16:24:06.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 52
+----------------------------------
+Timestamp: 16:24:06.890
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 87
+----------------------------------
+Timestamp: 16:24:07.031
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 51
+----------------------------------
+Timestamp: 16:24:07.171
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 88
+----------------------------------
+Timestamp: 16:24:07.343
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:07.578
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 89
+----------------------------------
+Timestamp: 16:24:07.593
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:07.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 90
+----------------------------------
+Timestamp: 16:24:07.625
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 45
+----------------------------------
+Timestamp: 16:24:07.640
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 91
+----------------------------------
+Timestamp: 16:24:07.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 53
+----------------------------------
+Timestamp: 16:24:07.687
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 93
+----------------------------------
+Timestamp: 16:24:07.703
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:07.718
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 94
+----------------------------------
+Timestamp: 16:24:07.734
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:07.750
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 95
+----------------------------------
+Timestamp: 16:24:07.765
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:07.937
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 96
+----------------------------------
+Timestamp: 16:24:08.171
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:08.375
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 98
+----------------------------------
+Timestamp: 16:24:08.718
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:08.875
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 99
+----------------------------------
+Timestamp: 16:24:09.109
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:09.312
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 101
+----------------------------------
+Timestamp: 16:24:09.562
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:09.578
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 102
+----------------------------------
+Timestamp: 16:24:09.609
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 46
+----------------------------------
+Timestamp: 16:24:09.625
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 103
+----------------------------------
+Timestamp: 16:24:09.640
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 47
+----------------------------------
+Timestamp: 16:24:09.656
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 105
+----------------------------------
+Timestamp: 16:24:09.671
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 50
+----------------------------------
+Timestamp: 16:24:09.687
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 113
+----------------------------------
+Timestamp: 16:24:09.718
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 5
+----------------------------------
+Timestamp: 16:24:09.828
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 115
+----------------------------------
+Timestamp: 16:24:09.984
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 50
+----------------------------------
+Timestamp: 16:24:10.265
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 116
+----------------------------------
+Timestamp: 16:24:10.578
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 47
+----------------------------------
+Timestamp: 16:24:10.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 117
+----------------------------------
+Timestamp: 16:24:10.625
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 40
+----------------------------------
+Timestamp: 16:24:10.765
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 118
+----------------------------------
+Timestamp: 16:24:10.859
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:11.078
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 119
+----------------------------------
+Timestamp: 16:24:11.359
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:11.703
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 121
+----------------------------------
+Timestamp: 16:24:11.953
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 49
+----------------------------------
+Timestamp: 16:24:12.000
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 122
+----------------------------------
+Timestamp: 16:24:12.296
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 25
+----------------------------------
+Timestamp: 16:24:12.562
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 123
+----------------------------------
+Timestamp: 16:24:12.593
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:12.750
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 124
+----------------------------------
+Timestamp: 16:24:12.859
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 63
+----------------------------------
+Timestamp: 16:24:13.062
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 125
+----------------------------------
+Timestamp: 16:24:13.281
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 44
+----------------------------------
+Timestamp: 16:24:13.578
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 126
+----------------------------------
+Timestamp: 16:24:13.609
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 6
+----------------------------------
+Timestamp: 16:24:13.640
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 127
+----------------------------------
+Timestamp: 16:24:13.718
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 54
+----------------------------------
+Timestamp: 16:24:13.937
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 128
+----------------------------------
+Timestamp: 16:24:14.109
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:14.265
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 129
+----------------------------------
+Timestamp: 16:24:14.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:14.765
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 130
+----------------------------------
+Timestamp: 16:24:14.984
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:15.125
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 131
+----------------------------------
+Timestamp: 16:24:15.312
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:15.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 132
+----------------------------------
+Timestamp: 16:24:15.734
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:15.890
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 133
+----------------------------------
+Timestamp: 16:24:16.015
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:16.156
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 134
+----------------------------------
+Timestamp: 16:24:16.390
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:16.625
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 135
+----------------------------------
+Timestamp: 16:24:16.765
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 38
+----------------------------------
+Timestamp: 16:24:16.812
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 136
+----------------------------------
+Timestamp: 16:24:16.937
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:17.078
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 138
+----------------------------------
+Timestamp: 16:24:17.171
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 39
+----------------------------------
+Timestamp: 16:24:17.359
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 139
+----------------------------------
+Timestamp: 16:24:17.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:17.796
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 140
+----------------------------------
+Timestamp: 16:24:17.937
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:18.078
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 141
+----------------------------------
+Timestamp: 16:24:18.218
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 52
+----------------------------------
+Timestamp: 16:24:18.359
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 142
+----------------------------------
+Timestamp: 16:24:18.578
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 52
+----------------------------------
+Timestamp: 16:24:18.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 143
+----------------------------------
+Timestamp: 16:24:18.625
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 18
+----------------------------------
+Timestamp: 16:24:18.765
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 144
+----------------------------------
+Timestamp: 16:24:18.890
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 8
+----------------------------------
+Timestamp: 16:24:19.062
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 145
+----------------------------------
+Timestamp: 16:24:19.203
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:19.375
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 146
+----------------------------------
+Timestamp: 16:24:19.578
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 46
+----------------------------------
+Timestamp: 16:24:19.625
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 147
+----------------------------------
+Timestamp: 16:24:19.703
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 6
+----------------------------------
+Timestamp: 16:24:19.875
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 149
+----------------------------------
+Timestamp: 16:24:19.984
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:20.093
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 150
+----------------------------------
+Timestamp: 16:24:20.234
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:20.562
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 151
+----------------------------------
+Timestamp: 16:24:20.593
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:20.625
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 152
+----------------------------------
+Timestamp: 16:24:20.656
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 46
+----------------------------------
+Timestamp: 16:24:20.671
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 153
+----------------------------------
+Timestamp: 16:24:20.703
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 45
+----------------------------------
+Timestamp: 16:24:20.734
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 154
+----------------------------------
+Timestamp: 16:24:20.765
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 13
+----------------------------------
+Timestamp: 16:24:20.906
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 155
+----------------------------------
+Timestamp: 16:24:20.968
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 64
+----------------------------------
+Timestamp: 16:24:21.062
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 156
+----------------------------------
+Timestamp: 16:24:21.203
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:21.375
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 157
+----------------------------------
+Timestamp: 16:24:21.578
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 1
+----------------------------------
+Timestamp: 16:24:21.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 158
+----------------------------------
+Timestamp: 16:24:21.640
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 51
+----------------------------------
+Timestamp: 16:24:21.656
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 159
+----------------------------------
+Timestamp: 16:24:21.687
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:21.718
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 160
+----------------------------------
+Timestamp: 16:24:21.843
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 47
+----------------------------------
+Timestamp: 16:24:21.953
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 161
+----------------------------------
+Timestamp: 16:24:22.093
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:22.250
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 163
+----------------------------------
+Timestamp: 16:24:22.562
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:22.593
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 164
+----------------------------------
+Timestamp: 16:24:22.703
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:22.812
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 165
+----------------------------------
+Timestamp: 16:24:22.890
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 56
+----------------------------------
+Timestamp: 16:24:23.000
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 166
+----------------------------------
+Timestamp: 16:24:23.125
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:23.187
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 167
+----------------------------------
+Timestamp: 16:24:23.281
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 18
+----------------------------------
+Timestamp: 16:24:23.375
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 168
+----------------------------------
+Timestamp: 16:24:23.718
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:23.875
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 169
+----------------------------------
+Timestamp: 16:24:24.015
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 20
+----------------------------------
+Timestamp: 16:24:24.156
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 170
+----------------------------------
+Timestamp: 16:24:24.281
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 57
+----------------------------------
+Timestamp: 16:24:24.640
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 171
+----------------------------------
+Timestamp: 16:24:24.734
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:24.843
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 172
+----------------------------------
+Timestamp: 16:24:24.953
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 18
+----------------------------------
+Timestamp: 16:24:25.109
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 173
+----------------------------------
+Timestamp: 16:24:25.265
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:25.390
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 174
+----------------------------------
+Timestamp: 16:24:25.671
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:25.843
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 175
+----------------------------------
+Timestamp: 16:24:25.968
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:26.093
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 177
+----------------------------------
+Timestamp: 16:24:26.218
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:26.562
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 178
+----------------------------------
+Timestamp: 16:24:26.593
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 54
+----------------------------------
+Timestamp: 16:24:26.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 179
+----------------------------------
+Timestamp: 16:24:26.640
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 9
+----------------------------------
+Timestamp: 16:24:26.671
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 180
+----------------------------------
+Timestamp: 16:24:26.687
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 31
+----------------------------------
+Timestamp: 16:24:26.718
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 181
+----------------------------------
+Timestamp: 16:24:26.750
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 65
+----------------------------------
+Timestamp: 16:24:26.781
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 182
+----------------------------------
+Timestamp: 16:24:26.812
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 25
+----------------------------------
+Timestamp: 16:24:26.828
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 183
+----------------------------------
+Timestamp: 16:24:26.968
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 66
+----------------------------------
+Timestamp: 16:24:27.031
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 184
+----------------------------------
+Timestamp: 16:24:27.171
+
+select name from zp_s_d where id=:p_dep_id
+
+p_dep_id = 46
+----------------------------------
+Timestamp: 16:24:27.562
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 185
+----------------------------------
+Timestamp: 16:24:27.578
+
+select z.*, s.name from z_d z, zp_s_d s where z.d_id = s.id
+
+----------------------------------
+Timestamp: 16:24:27.625
+
+select p.id, p.name, p.d_b, p.sx, p.psp, p.adr1, p.adr2, p.tel1, p.tel2, p.inn      ,p.inpc, p.pk_account, p.d_a, p.o_a, p.d_f, 
+p.o_f      ,z.id z_id, z.d_id z_d_id, z.dat z_dat, z.ord z_ord  from zp_s_p p, z_d z where z.p_id = p.id and z.p_id not in 
+(select p_id from v_z_EmpNoCalc)   and z.dat = (select max(b.dat) from z_d b where b.p_id = z.p_id and b.dat <= (select g.d 
+from dual) )
+
+----------------------------------
+Timestamp: 16:24:27.875
+
+select p.tabno tabno, substr(p.family||' '||p.first_name||' '||p.patronymic,1,80) fio, p.gender_code, p.birthday, 
+p.pass_seriya||' '||p.pass_num pass_sn, substr(p.home_addressfact,1,80) home_addressfact, substr(p.home_address,1,80) 
+home_address, substr(p.telefon,1,16) telefon, p.inn, p.nps_id, per.in_office_date, per.basis_num, per.out_office_date, 
+per.num_pr_off, nvl(p.department_code,per.department_code) department_code, nvl(p.post_code,per.post_code) post_code, 
+p.special_code from ok_personal p, ok_period per where p.branch=info.getbranch and per.branch=p.branch and p.STATUS_CODE IN (4) 
+and per.personal_code=p.personal_code and per.in_office_date = (select /*+ index_desc(per2 OK_PERIOD_PK)*/ per2.in_office_date 
+from ok_period per2 where per2.branch=p.branch and per2.personal_code=p.personal_code and TYPE_PERIOD_CODE=3 and rownum=1) 
+order by p.id
+
+----------------------------------
+Timestamp: 16:24:28.000
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 11
+----------------------------------
+Timestamp: 16:24:28.109
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 12
+----------------------------------
+Timestamp: 16:24:28.250
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 1
+----------------------------------
+Timestamp: 16:24:28.343
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 22
+----------------------------------
+Timestamp: 16:24:28.578
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 43
+----------------------------------
+Timestamp: 16:24:28.609
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 28
+----------------------------------
+Timestamp: 16:24:28.640
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 22
+----------------------------------
+Timestamp: 16:24:28.656
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 31
+----------------------------------
+Timestamp: 16:24:28.687
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 45
+----------------------------------
+Timestamp: 16:24:28.718
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 34
+----------------------------------
+Timestamp: 16:24:28.750
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 1
+----------------------------------
+Timestamp: 16:24:28.781
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 41
+----------------------------------
+Timestamp: 16:24:28.796
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 55
+----------------------------------
+Timestamp: 16:24:28.828
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 42
+----------------------------------
+Timestamp: 16:24:28.859
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 44
+----------------------------------
+Timestamp: 16:24:28.890
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 43
+----------------------------------
+Timestamp: 16:24:28.921
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 9
+----------------------------------
+Timestamp: 16:24:28.953
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 56
+----------------------------------
+Timestamp: 16:24:28.984
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 4
+----------------------------------
+Timestamp: 16:24:29.000
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 57
+----------------------------------
+Timestamp: 16:24:29.031
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 40
+----------------------------------
+Timestamp: 16:24:29.062
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 73
+----------------------------------
+Timestamp: 16:24:29.078
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 31
+----------------------------------
+Timestamp: 16:24:29.125
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 77
+----------------------------------
+Timestamp: 16:24:29.250
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 9
+----------------------------------
+Timestamp: 16:24:29.546
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 81
+----------------------------------
+Timestamp: 16:24:29.625
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 43
+----------------------------------
+Timestamp: 16:24:29.750
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 85
+----------------------------------
+Timestamp: 16:24:29.875
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 56
+----------------------------------
+Timestamp: 16:24:30.000
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 86
+----------------------------------
+Timestamp: 16:24:30.062
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 47
+----------------------------------
+Timestamp: 16:24:30.187
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 97
+----------------------------------
+Timestamp: 16:24:30.296
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 31
+----------------------------------
+Timestamp: 16:24:30.578
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 100
+----------------------------------
+Timestamp: 16:24:30.609
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 56
+----------------------------------
+Timestamp: 16:24:30.625
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 104
+----------------------------------
+Timestamp: 16:24:30.703
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 47
+----------------------------------
+Timestamp: 16:24:30.843
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 106
+----------------------------------
+Timestamp: 16:24:30.968
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 31
+----------------------------------
+Timestamp: 16:24:31.125
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 107
+----------------------------------
+Timestamp: 16:24:31.265
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 31
+----------------------------------
+Timestamp: 16:24:31.343
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 108
+----------------------------------
+Timestamp: 16:24:31.609
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 50
+----------------------------------
+Timestamp: 16:24:31.625
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 109
+----------------------------------
+Timestamp: 16:24:31.656
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 37
+----------------------------------
+Timestamp: 16:24:31.687
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 110
+----------------------------------
+Timestamp: 16:24:31.718
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 4
+----------------------------------
+Timestamp: 16:24:31.750
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 111
+----------------------------------
+Timestamp: 16:24:31.890
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 31
+----------------------------------
+Timestamp: 16:24:32.031
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 112
+----------------------------------
+Timestamp: 16:24:32.140
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 25
+----------------------------------
+Timestamp: 16:24:32.281
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 114
+----------------------------------
+Timestamp: 16:24:32.546
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 63
+----------------------------------
+Timestamp: 16:24:32.703
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 120
+----------------------------------
+Timestamp: 16:24:32.890
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 47
+----------------------------------
+Timestamp: 16:24:33.015
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 148
+----------------------------------
+Timestamp: 16:24:33.125
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 18
+----------------------------------
+Timestamp: 16:24:33.281
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 162
+----------------------------------
+Timestamp: 16:24:33.609
+
+select name from zp_s_d where id=:p_ID
+
+p_id = 9
+----------------------------------
+Timestamp: 16:24:33.734
+
+select name from zp_s_p where id=:p_tab_ID
+
+p_tab_id = 176
+----------------------------------
+Timestamp: 16:24:33.859
+
+select z.*, s.name from z_d z, zp_s_d s where z.d_id = s.id
+
+----------------------------------
+Timestamp: 16:24:33.937
+
+select p.id, p.name, p.d_b, p.sx, p.psp, p.adr1, p.adr2, p.tel1, p.tel2, p.inn      ,p.inpc, p.pk_account, p.d_a, p.o_a, p.d_f, 
+p.o_f      ,z.id z_id, z.d_id z_d_id, z.dat z_dat, z.ord z_ord  from zp_s_p p, z_d z where z.p_id = p.id and z.p_id not in 
+(select p_id from v_z_EmpNoCalc)   and z.dat = (select max(b.dat) from z_d b where b.p_id = z.p_id and b.dat <= (select g.d 
+from dual) )
+
+----------------------------------
+Timestamp: 16:24:34.062
+
+commit
+

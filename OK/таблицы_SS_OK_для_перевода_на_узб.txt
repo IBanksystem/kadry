@@ -1,0 +1,292 @@
+prompt #  справочники  (есть в модуле Кадры-справочники)
+
+prompt #  справочник ученые звания  (есть в модуле Кадры-справочники)
+select * from SS_OK_ACADEMIC;
+
+prompt #  справочник группа учета(армия) (есть в модуле Кадры-справочники)
+select * from SS_OK_ARMY_GROUP;
+
+prompt #  справочник статьи кзот (есть в модуле Кадры-справочники)
+select * from SS_OK_ARTICLE;
+
+prompt #  справочник оснований перемещения (есть в модуле Кадры-справочники)
+select * from SS_OK_BASE_MOVE;
+
+prompt #  справочник категория учета(армия) (есть в модуле Кадры-справочники)
+select * from SS_OK_CATEGORY_ARMY;
+
+prompt #  справочник города (есть в модуле Кадры-справочники)
+select * from ss_ok_city;
+
+prompt #  справочник типов приказов (есть в модуле Кадры-справочники)
+select * from SS_OK_COMMAND_TYPE;
+
+prompt #  справочник ученые степени (есть в модуле Кадры-справочники)
+select * from SS_OK_DEGREE;
+
+prompt #  справочник отделов (есть в модуле Кадры-справочники)
+select * from SS_OK_DEPARTMENT;
+
+prompt #  справочник типы отделов (есть в модуле Кадры-справочники)
+select * from SS_OK_DEPARTMENT_TYPE;
+
+prompt #  учебные заведения  (есть в модуле Кадры-справочники)
+select * from SS_OK_EDUCATION;
+
+prompt #  наименование образования  (есть в модуле Кадры-справочники)
+select * from SS_OK_EDUCATION_TITLE;
+
+prompt #  справочник исполнительные органы (есть в модуле Кадры-справочники)
+select * from SS_OK_ELECTION;
+
+prompt #  справочник виды больничных (есть в модуле Кадры-справочники)
+select * from SS_OK_HOSPITAL;
+
+prompt #   справочник учебные заведения (есть в модуле Кадры-справочники)
+select * from SS_OK_INSTITUTION;
+
+prompt #  справочник курсы повышения квалификации (есть в модуле Кадры-справочники)
+select * from SS_OK_KV_KURS;
+
+prompt #  ин.языки (есть в модуле Кадры-справочники)
+select * from SS_OK_LANGUAGE;
+
+prompt #  справочник виды отпусков (есть в модуле Кадры-справочники)
+select * from SS_OK_LEAVE;
+
+prompt #  уровни владения ин.яз. (есть в модуле Кадры-справочники)
+select * from SS_OK_LEVEL_LANGUAGE;
+
+prompt #  справочник воинские звания (есть в модуле Кадры-справочники)
+select * from SS_OK_MILITARY_RANK;
+
+prompt #  справочник причины увольнений (есть в модуле Кадры-справочники)
+select * from SS_OK_MOTIVE_DISMISSIAL;
+
+prompt #  национальности (есть в модуле Кадры-справочники)
+select * from SS_OK_NATIONALITY;
+
+prompt #  справочник организатор проведения командировки (есть в модуле Кадры-справочники)
+select * from SS_OK_ORG_BUSINESS_VOYAGE;
+
+prompt #  партии (есть в модуле Кадры-справочники)
+select * from SS_OK_PARTY;
+
+prompt #  справочник виды наказаний (есть в модуле Кадры-справочники)
+select * from SS_OK_PENALTY;
+
+prompt #  справочник должностей (есть в модуле Кадры-справочники)
+select * from SS_OK_POST;
+
+prompt #  справочник групп должностей
+select * from SS_OK_POST_GROUP;
+
+prompt #  справочник виды льгот (есть в модуле Кадры-справочники)
+select * from SS_OK_PRIVILEGE;
+
+prompt #  справочник квалификация (есть в модуле Кадры-справочники)
+select * from SS_OK_QUALIFICATION;
+
+prompt #  справочник места регистрации паспортов (есть в модуле Кадры-справочники)
+select * from SS_OK_REGPLACE;
+
+prompt #  справочник родственные отношения (есть в модуле Кадры-справочники)
+select * from SS_OK_RELATION;
+
+prompt #  справочник специализация (есть в модуле Кадры-справочники)
+select * from SS_OK_SPECIAL;
+
+prompt #  справочник вид состава (армия) (есть в модуле Кадры-справочники)
+select * from SS_OK_STAFF;
+
+prompt #  справочник тема командировки (есть в модуле Кадры-справочники)
+select * from SS_OK_THEME_BUSINESS_VOYAGE;
+
+prompt #  справочник род войск (армия) (есть в модуле Кадры-справочники)
+select * from SS_OK_TYPE_FORCE;
+
+prompt #  справочник молодежные организации (есть в модуле Кадры-справочники)
+select * from SS_OK_YOUTH;
+
+prompt #  справочник типы ставки рабочего времени (есть в модуле Кадры-справочники)
+select * from SS_OK_ZP_RATE_TYPE;
+
+=================================
+=================================
+
+
+prompt # системные справочники отдела кадров (переводить апдейтом)
+prompt #  признаки действия
+select * from SS_OK_ACTION_HIST;
+update SS_OK_ACTION_HIST set ACTION_HIST_name='УЗБ' where ACTION_HIST_ID=0;
+
+prompt #  признаки сканированных файлов
+select * from SS_OK_ADDINFORM;
+
+prompt # Военнообязанный - Не военнообязанный
+select * from SS_OK_ARMY;
+update SS_OK_ARMY set ARMY_TYPE='УЗБ' where ARMY_code=0;
+
+prompt # Код  наличия базового  образования	1 - Базовое2 -  Другое
+select * from SS_OK_BASIS;
+
+prompt # признак образования
+select * from SS_OK_EDUCATION_COUNT;
+prompt # 0 -
+prompt # 1 Первое образование
+prompt # 2 Второе образование
+
+
+select * from SS_OK_FAMILY_STATUS;
+prompt # 1           1 Женат
+prompt # 2           1 Холост
+prompt # 3           2 Замужем
+prompt # 4           2 Незамужем
+prompt # 5           1 Разведен
+prompt # 6           2 Разведена
+
+prompt # отношение к воинской службе
+select * from SS_OK_FITNESS_ARMY;
+prompt #   1 Годен
+prompt #   2 Не годен
+update SS_OK_FITNESS_ARMY set FITNESS_ARMY_TYPE='УЗБ' where FITNESS_ARMY_code=0;
+
+
+prompt # пол
+select * from SS_OK_GENDER;
+prompt # 
+
+prompt # признаки в ГО
+select * from SS_OK_GOSUBMIT;
+prompt # 
+
+prompt # название надбавки
+select * from SS_OK_INCREASE;
+prompt # 
+
+prompt # название вакансии
+select * from SS_OK_VACANCY;
+prompt # 
+
+prompt # вид обучения
+select * from SS_OK_VID_EDUCATION;
+prompt #   1 (кундузги)  
+prompt #   2 (сиртки)    
+prompt #   3 (кечки)     
+prompt #   4 (масофавий) 
+
+prompt # уровень отделов
+select * from SS_OK_LEVEL_DEPARTMENT;
+prompt # 
+
+prompt # тип паспорта
+select * from SS_OK_PASSPORT_TYPE;
+prompt # 
+prompt # 
+
+prompt #  наименования колонок в генераторе отчетов
+select * from SS_OK_PERS_COL_DFLT;
+prompt # update SS_OK_PERS_COL_DFLT set name_displ='УЗБ',name_paper='УЗБ2' where code_table='001' and code_num='01';
+
+
+
+prompt # 
+
+select * from SS_OK_PROFMEMBER;
+prompt # профсоюз 1-да 0-нет
+update SS_OK_PROFMEMBER set PROFMEMBER_name='УЗБ' where PROFMEMBER=0;
+prompt # прописка
+select * from SS_OK_REG_TYPE;
+prompt # временная 
+prompt # постоянная
+
+prompt # резерв:
+select * from SS_OK_REZERV;
+prompt # 1 Нет
+prompt # 2 Требуется
+
+select * from SS_OK_REZERVE;
+prompt # 1 Резерв отсутствует
+prompt # 2 Имеются документы
+
+select * from SS_OK_STATUS;
+prompt # 1 Новый
+prompt # 2 Принят
+prompt # 3 Не принят
+prompt # 4 Уволен
+prompt # 5 Декретный отпуск
+
+SS_OK_PERS_QUERY
+update SS_OK_PERS_QUERY set name='УЗБ' where code=0;
+
+
+=================================
+
+spool c:\err.txt
+update SS_OK_ACADEMIC set ACADEMIC_name='УЗБ' where ACADEMIC_code=0;
+update SS_OK_ADDINFORM set ADDINFORM_name='УЗБ' where ADDINFORM_code=0;
+update SS_OK_ARMY_GROUP set ARMY_GROUP_name='УЗБ' where ARMY_GROUP_code=0;
+update SS_OK_ARTICLE set ARTICLE_name='УЗБ' where ARTICLE_code=0;
+update SS_OK_BASE_MOVE set BASE_MOVE_name='УЗБ' where BASE_MOVE_code=0;
+update SS_OK_BASIS set BASIS_name='УЗБ' where BASIS_code=0;
+update SS_OK_CATEGORY set CATEGORY_name='УЗБ' where CATEGORY_code=0;
+update SS_OK_CATEGORY_ARMY set CATEGORY_ARMY_name='УЗБ' where CATEGORY_ARMY_code=0;
+update SS_OK_CITY set CITY_name='УЗБ' where CITY_code=0;
+update SS_OK_COMMAND_PARAM set COMMAND_PARAM_name='УЗБ' where COMMAND_PARAM_code=0;
+update SS_OK_COMMAND_TYPE set COMMAND_TYPE_name='УЗБ' where COMMAND_TYPE_code=0;
+update SS_OK_DEGREE set DEGREE_name='УЗБ' where DEGREE_code=0;
+update SS_OK_DEPARTMENT set DEPARTMENT_name='УЗБ' where DEPARTMENT_code=0;
+update SS_OK_DEPARTMENT_TYPE set DEPARTMENT_TYPE_name='УЗБ' where DEPARTMENT_TYPE_code=0;
+
+update SS_OK_EDUCATION set EDUCATION_name='УЗБ' where EDUCATION_code=0;
+update SS_OK_EDUCATION_COUNT set EDUCATION_COUNT_name='УЗБ' where EDUCATION_COUNT_code=0;
+update SS_OK_EDUCATION_TITLE set EDUCATION_TITLE_name='УЗБ' where EDUCATION_TITLE_code=0;
+update SS_OK_ELECTION set ELECTION_name='УЗБ' where ELECTION_code=0;
+update SS_OK_FAMILY_STATUS set FAMILY_STATUS_name='УЗБ' where FAMILY_STATUS_code=0;
+update SS_OK_GENDER set GENDER_name='УЗБ' where GENDER_code=0;
+update SS_OK_GOSUBMIT set GOSUBMIT_name='УЗБ' where GOSUBMIT_code=0;
+
+update SS_OK_HOSPITAL set HOSPITAL_name='УЗБ' where HOSPITAL_code=0;
+update SS_OK_INCREASE set INCREASE_name='УЗБ' where INCREASE_code=0;
+update SS_OK_INSTITUTION set INSTITUTION_name='УЗБ' where INSTITUTION_code=0;
+update SS_OK_KV_KURS set KV_KURS_name='УЗБ' where KV_KURS_code=0;
+update SS_OK_LANGUAGE set LANGUAGE_name='УЗБ' where LANGUAGE_code=0;
+update SS_OK_LEAVE set LEAVE_name='УЗБ' where LEAVE_code=0;
+
+update SS_OK_LEVEL_DEPARTMENT set LEVEL_DEPARTMENT_name='УЗБ' where LEVEL_DEPARTMENT_code=0;
+update SS_OK_LEVEL_LANGUAGE set LEVEL_LANGUAGE_name='УЗБ' where LEVEL_LANGUAGE_code=0;
+update SS_OK_MILITARY_RANK set MILITARY_RANK_name='УЗБ' where MILITARY_RANK_code=0;
+
+update SS_OK_MOTIVE_DISMISSIAL set MOTIVE_DISMISSIAL_name='УЗБ' where MOTIVE_DISMISSIAL_code=0;
+update SS_OK_NATIONALITY set NATIONALITY_name='УЗБ' where NATIONALITY_code=0;
+
+update SS_OK_ORG_BUSINESS_VOYAGE set ORG_BUSINESS_VOYAGE_name='УЗБ' where ORG_BUSINESS_VOYAGE_code=0;
+update SS_OK_PARTY set PARTY_name='УЗБ' where PARTY_code=0;
+update SS_OK_PASSPORT_TYPE set PASSPORT_TYPE_name='УЗБ' where PASSPORT_TYPE_code=0;
+update SS_OK_PENALTY set PENALTY_name='УЗБ' where PENALTY_code=0;
+update SS_OK_POST set POST_name='УЗБ' where POST_code=0;
+update SS_OK_POST_GROUP set POST_GROUP_name='УЗБ' where POST_GROUP_code=0;
+update SS_OK_PRIVILEGE set PRIVILEGE_name='УЗБ' where PRIVILEGE_code=0;
+
+update SS_OK_QUALIFICATION set QUALIFICATION_name='УЗБ' where QUALIFICATION_code=0;
+
+update SS_OK_REGPLACE set REGPLACE_name='УЗБ' where REGPLACE_code=0;
+update SS_OK_REG_TYPE set REG_TYPE_name='УЗБ' where REG_TYPE_code=0;
+update SS_OK_RELATION set RELATION_name='УЗБ' where RELATION_code=0;
+update SS_OK_REZERV set REZERV_name='УЗБ' where REZERV_code=0;
+update SS_OK_REZERVE set REZERVE_name='УЗБ' where REZERVE_code=0;
+update SS_OK_SPECIAL set SPECIAL_name='УЗБ' where SPECIAL_code=0;
+update SS_OK_STAFF set STAFF_name='УЗБ' where STAFF_code=0;
+update SS_OK_STATUS set STATUS_name='УЗБ' where STATUS_code=0;
+
+
+update SS_OK_TEMPLATE_COMMAND set TEMPLATE_COMMAND_name='УЗБ' where TEMPLATE_COMMAND_code=0;
+update SS_OK_THEME_BUSINESS_VOYAGE set THEME_BUSINESS_VOYAGE_name='УЗБ' where THEME_BUSINESS_VOYAGE_code=0;
+update SS_OK_TYPE_FORCE set TYPE_FORCE_name='УЗБ' where TYPE_FORCE_code=0;
+update SS_OK_TYPE_PERIOD set TYPE_PERIOD_name='УЗБ' where TYPE_PERIOD_code=0;
+update SS_OK_VACANCY set VACANCY_name='УЗБ' where VACANCY_code=0;
+update SS_OK_VID_EDUCATION set VID_EDUCATION_name='УЗБ' where VID_EDUCATION_code=0;
+update SS_OK_YOUTH set YOUTH_name='УЗБ' where YOUTH_code=0;
+update SS_OK_ZP_RATE set ZP_RATE_name='УЗБ' where ZP_RATE_code=0;
+update SS_OK_ZP_RATE_TYPE set ZP_RATE_TYPE_name='УЗБ' where ZP_RATE_TYPE_code=0;
+spool off;

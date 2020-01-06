@@ -1,0 +1,144 @@
+
+-- For Rec In (select TABNO,PASS_NUM from OK_PERSONAL where length(nvl(PASS_NUM,'0'))<>7 and STATUS_CODE IN (2,5))
+-- Loop
+--    err('Ошибка для отчетности ИИАС, Отдел Кадров: Ошибка в длине номера паспорта Таб.Номер='||rec.TABNO||' Номер паспорта='||rec.PASS_NUM);
+-- End Loop;
+
+
+
+
+
+
+--  select count(*) Into cnt FROM OK_PERSONAL, (select * from SS_OK_NCI where NCI_ID=79) BOSS where STATUS_CODE IN (2, 5) and POST_CODE=BOSS.OK_ID ;
+--  if cnt = 0 then
+--     err('Ошибка для отчетности ИИАС, Отдел Кадров: Отсутствует информация о <Руководящем составе>');
+--  end if;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--      begin
+--        select s_id into cnt_obraz from ss_ok_nci where nci_id=74
+--          and ok_id=rec_ok.EDUCATION_TITLE_CODE and rownum<2;
+--      exception when others then
+--        err('Ошибка для отчетности ИИАС,Отдел Кадров,образование:Справочник соответствия не заполнен Таб.Номер='||rec_ok.TABNO);
+--      end;
+--
+--    for rec_oked in (select BRANCH,PERSONAL_CODE,EDUCATION_CODE,BASIS_CODE,INSTITUTION_CODE,BEGIN_DATE,END_DATE,PROFESSION_PERSONAL,
+--       QUALIFICATION_CODE,DIPLOM_NUM,COD_VUZ_PRIM,CURS,FAKULTET,NOSTRA,NOSTRA_SERIES,NOSTRA_NUMBER,NOSTRA_DATE,
+--       DIPLOM_DATE,BEGIN_DATE_MM,BEGIN_DATE_DD,END_DATE_MM,END_DATE_DD,EDUCATION_END,EDUCATION_CITY,EDUCATION_COUNT_CODE,VID_EDUCATION_CODE
+--       from ok_education where branch=rec_ok.branch and personal_code=rec_ok.personal_code)
+--    loop
+--
+--      begin
+--        select s_id into cnt_uchzav from ss_ok_nci where nci_id=80
+--          and ok_id=rec_oked.INSTITUTION_CODE and rownum<2;
+--      exception when others then
+--        err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Справочник соответствия не заполнен Таб.Номер='||rec_ok.TABNO||' код уч.заведения в ОК='||rec_oked.INSTITUTION_CODE);
+--      end;
+--
+--      if (cnt_obraz in (1,6,7)) and (cnt_uchzav<>999)
+--      then
+--         err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:неверно указано образование-среднее для высших учебных заведений Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if ((cnt_uchzav=202) or (cnt_uchzav=999)) and (rec_oked.COD_VUZ_PRIM is null)
+--       then
+--         err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:укажите примечание для учебного заведения Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if (rec_oked.begin_date is null)
+--       and (((rec_oked.begin_date_mm is not null)) or (rec_oked.begin_date_dd is not null))
+--       then
+--         err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:если не указан год поступления, день и месяц поступления нельзя вводить. Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if (rec_oked.end_date is null)
+--       then
+--         if (rec_oked.CURS is null)
+--         then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:если не указан год окончания, укажите курс. Таб.Номер='||rec_ok.TABNO);
+--         end if;
+--         if (((rec_oked.end_date_mm is not null)) or (rec_oked.end_date_dd is not null))
+--         then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:если не указан год окончания, день и месяц окончания нельзя вводить. Таб.Номер='||rec_ok.TABNO);
+--         end if;
+--       else
+--         if to_date( '01.01.'||to_char(rec_oked.end_date),'dd.mm.yyyy')>rec_oked.Diplom_Date
+--         then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:НЕВЕРНЫЙ год выдачи диплома. Таб.Номер='||rec_ok.TABNO);
+--         end if;
+--        BEGIN
+--         if (((rec_oked.end_date_mm is not null)) and (rec_oked.end_date_dd is not null))
+--         then
+--           if to_date( to_char(rec_oked.end_date_dd)||'.'||to_char(rec_oked.end_date_mm)||'.'||to_char(rec_oked.end_date),'dd.mm.yyyy')>rec_oked.Diplom_Date
+--           then
+--             err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Неверная дата выдачи диплома. Таб.Номер='||rec_ok.TABNO);
+--           end if;
+--         end if;
+--        EXCEPTION WHEN OTHERS THEN NULL;
+--        END;
+--       end if;
+-- 
+--       if (rec_oked.Diplom_Date is not null) and ( rec_oked.DIPLOM_NUM is null)
+--       then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Если есть Дата выдачи диплома, то введите Номер диплома. Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if (rec_oked.begin_date is not null)
+--       then
+--         if to_date( '01.01.'||to_char(rec_oked.begin_date),'dd.mm.yyyy')>sysdate
+--         then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:НЕВЕРНЫЙ год поступления. Таб.Номер='||rec_ok.TABNO);
+--         end if;
+--       end if;
+-- 
+--       if (rec_oked.begin_date is not null)
+--       and (((rec_oked.begin_date_mm is not null)) and (rec_oked.begin_date_dd is not null))
+--       then
+--        BEGIN
+--         if to_date( to_char(rec_oked.begin_date_dd)||'.'||to_char(rec_oked.begin_date_mm)||'.'||to_char(rec_oked.begin_date),'dd.mm.yyyy')>sysdate
+--         then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:НЕВЕРНЫЙ год, день и месяц поступления. Таб.Номер='||rec_ok.TABNO);
+--         end if;
+--        EXCEPTION WHEN OTHERS THEN NULL;
+--        END;
+--       end if;
+-- 
+--       if (rec_oked.begin_date is null)
+--       and (((rec_oked.begin_date_mm is not null)) or (rec_oked.begin_date_dd is not null))
+--       then
+--         err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:если не указан год поступления, день и месяц поступления нельзя вводить. Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if (cnt_obraz in (3,4,5)) and (rec_oked.profession_personal is null)
+--       then
+--         err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Укажите специальность Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if (rec_oked.nostra='1') and (rec_oked.nostra_number is null or rec_oked.nostra_date is null)
+--       then
+--           err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Если есть Нострификация, то введите Дату и Номер. Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--       if rec_oked.nostra_date > sysdate
+--       then
+--        err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Неверная дата Нострификации. Таб.Номер='||rec_ok.TABNO);
+--      end if;
+-- 
+--       if (rec_oked.nostra_date-rec_ok.birthday) < 20*365
+--       then
+--         err('Ошибка для отчетности ИИАС,Отдел Кадров,Учебные заведения:Разница Даты нострификации и даты рождения сотрудника не должна быть меньше 20 и больше возраста сотрудника. Таб.Номер='||rec_ok.TABNO);
+--       end if;
+-- 
+--    end loop;

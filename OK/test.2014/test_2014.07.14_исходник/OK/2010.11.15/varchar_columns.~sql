@@ -1,0 +1,97 @@
+drop table ok_temp;
+create table ok_temp(
+id number,
+name1 varchar2(250)
+);
+
+select ok_latcyr('какавякаQ') from dual;
+
+
+SELECT
+                     TRIM(SUBSTR(OKP.FAMILY,1,30))               FAMILY,
+                     TRIM(SUBSTR(OKP.FIRST_NAME,1,30))           FIRST_NAME,
+                     TRIM(SUBSTR(OKP.PATRONYMIC,1,30))           PATRONYMIC,
+                     TRIM(SUBSTR(OKP.PASS_SERIYA,1,2))           PASS_SERIYA,
+                     TRIM(SUBSTR(OKP.COD_DISTR_PRIM,1,50))       COD_DISTR_PRIM,
+                     TRIM(SUBSTR(OKP.COD_OBL_PRIM,1,50))         COD_OBL_PRIM,
+                     TRIM(SUBSTR(OKP.COD_PLACE_BIRTH_PRIM,1,50)) COD_PLACE_BIRTH_PRIM,
+                     TRIM(SUBSTR(OKP.BIRTHPLACE,1,50))           BIRTHPLACE,
+                     okp.live_place
+                     TRIM(SUBSTR(OKP.COD_OBL_LIVE_PRIM,1,50))    COD_OBL_LIVE_PRIM,
+                     TRIM(SUBSTR(OKP.COD_DISTR_LIVE_PRIM,1,50))  COD_DISTR_LIVE_PRIM,
+                     TRIM(SUBSTR(OKP.PASS_REG,1,50))             PASS_REG,
+                     TRIM(SUBSTR(OKP.CODE_NACI_PRIM,1,50))       CODE_NACI_PRIM,
+                FROM OK_PERSONAL OKP,
+                     OK_PERIOD OP
+                     
+                     
+SELECT okf.family
+        FROM ok_personal OKP,ok_change_fio OKF
+        
+        
+SELECT 
+                     TRIM(substr(OKP.RELATION_FAMILY,1,30))           RELATION_FAMILY,
+                     TRIM(substr(OKP.RELATION_NAME,1,30))             RELATION_NAME,
+                     TRIM(substr(OKP.RELATION_PATRONYMIC,1,30))       RELATION_PATRONYMIC,
+                     TRIM(substr(OKP.COD_OBL_birth_PRIM,1,50))        COD_OBL_birth_PRIM,
+                     TRIM(substr(OKP.COD_CITY_birth_PRIM,1,50))       COD_CITY_birth_PRIM,
+                     TRIM(SUBSTR(OKP.RELATION_BIRTHPLACE,1,50))       RELATION_BIRTHPLACE,
+                     TRIM(SUBSTR(OKP.COD_STR_LIVE_PRIM,1,50))         COD_STR_LIVE_PRIM,
+                     TRIM(SUBSTR(OKP.COD_OBL_LIVE_PRIM,1,50))         COD_OBL_LIVE_PRIM,
+                     TRIM(SUBSTR(OKP.COD_city_PRIM,1,50))             COD_city_PRIM,
+                     TRIM(SUBSTR(OKP.RELATION_HOME_ADDRESS,1,50))     RELATION_HOME_ADDRESS,
+                     TRIM(SUBSTR(OKP.RELATION_OFFICE, 1, 100))        RELATION_OFFICE,
+                     TRIM(SUBSTR(OKP.RELATION_POST, 1, 100))          RELATION_POST
+                FROM OK_PERSONAL OK, OK_RELATION OKP, SS_OK_NCI SON
+                
+                
+SELECT 
+                     TRIM(SUBSTR(OKP.OFFICE_NAME, 1, 100))                              OFFICE_NAME,
+                     SUBSTR(DECODE(OKP.DOLJN_ID,'999',OKP.ESTABLISHED_POST,NULL),1,100) DOLGN,
+                     TRIM(SUBSTR(OK.NAME_Pr,1,100))                                     NAME_Pr,
+                     TRIM(SUBSTR(OKP.RESH_ATTEST, 1, 100))                              RESH_ATTEST
+                FROM OK_PERSONAL OK, OK_PERIOD OKP, SS_OK_NCI SON
+                
+                
+SELECT 
+                              TRIM(SUBSTR(OKP.COD_VUZ_PRIM, 1, 50))                   COD_VUZ_PRIM,
+                              TRIM(SUBSTR(OKP.FAKULTET, 1, 40))                       FAKULTET,
+                              TRIM(SUBSTR(OKP.PROFESSION_PERSONAL, 1, 50))            PROFESSION_PERSONAL,
+                FROM OK_PERSONAL OK, OK_EDUCATION OKP, SS_OK_NCI SON
+                
+                
+SELECT
+                              SUBSTR(OKP.AWARD_INFO, 1, 200)        AWARD_INFO,
+                FROM OK_PERSONAL OK, OK_AWARD OKP
+                
+                
+SELECT 
+                              TRIM(SUBSTR(SOKP.ELECTION_NAME, 1, 100))                         ELECTION_NAME,
+                FROM OK_PERSONAL OK, OK_ELECTION OKP, SS_OK_ELECTION SOKP
+                
+                
+SELECT
+                              TRIM(SUBSTR(OKP.VOYAGE_INFO, 1, 400))                    VOYAGE_INFO,
+                FROM OK_PERSONAL OK, OK_VOYAGE OKP
+                
+
+SELECT
+                     SUBSTR(OKP.COD_LANG_PRIM, 1, 50)    COD_LANG_PRIM
+                FROM OK_PERSONAL OK, OK_LANGUAGE OKP, SS_OK_NCI SON
+                
+SELECT
+                              SUBSTR(OKP.RISE_INFO, 1, 100)                  RISE_INFO,
+                FROM OK_PERSONAL OK, OK_RISE OKP
+                
+SELECT
+                             TRIM(SOP.POST_NAME) NAME_DOLGN,
+                        FROM OK_PERSONAL OK, SS_OK_NCI SON, SS_OK_POST SOP
+                        
+                        
+                                                                                                                                                        
+                
+                
+                
+                
+                
+                                             

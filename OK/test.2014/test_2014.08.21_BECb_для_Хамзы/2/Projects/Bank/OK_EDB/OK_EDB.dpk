@@ -1,0 +1,48 @@
+package OK_EDB;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dsnap,
+  dsnapcon,
+  General,
+  vclx,
+  qrpt,
+  vcljpg;
+
+contains
+  BOKEDBMain in 'BOKEDBMain.pas' {BOKEDBForm},
+  BOKMain in '..\OK\BOKMain.pas' {BOKForm},
+  FilterPersonal in '..\OK\FilterPersonal.pas' {fmFilterPersonal},
+  OKAppoint in '..\OK\OKAppoint.pas' {fmOKAppoint},
+  OKChangeFIO in '..\OK\OKChangeFIO.pas' {fmOKChangeFIO},
+  OKDekret in '..\OK\OKDekret.pas' {fmOKDekret},
+  OKDismiss in '..\OK\OKDismiss.pas' {fmOKDismiss},
+  OKRezerv in '..\OK\OKRezerv.pas' {fmOKRezerv},
+  OKChangePASPORT in '..\OK\OKChangePASPORT.pas' {fmOKChangePasport};
+
+end.

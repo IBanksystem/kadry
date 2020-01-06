@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Translations>
+  <module id="UserList">
+    <key id="button2">Создать общий архив</key>
+    <key id="label1">Создание нового списка</key>
+    <key id="label2">Выбор из существующих списков</key>
+    <key id="button1">Создать</key>
+    <key id="UserList">Списки</key>
+    <key id="message1">Название списка не может совпадать с уже существующим!</key>
+    <key id="message2">Название списка не может быть пустым!</key>
+    <key id="message3">Вы действительно хотите удалить список</key>
+    <key id="message4">Подтвердите удаление</key>
+    <key id="message5">Название листа должно состоять из букв и цифр</key>
+    <key id="uzbToolStripMenuItem1">Узбекский</key>
+    <key id="rusToolStripMenuItem">Русский</key>
+    <key id="chooseLangToolStripMenuItem1">Выберите язык</key>
+    <key id="exitToolStripMenuItem">Выход</key>
+    <key id="editToolStripMenuItem">Редактировать</key>
+    <key id="about">Данный программный продукт предназначен для упрощения сбора данных о сотрудниках компании предоставляющих списки для тестирования</key>
+    <key id="message6">Поле не может быть пустым</key>
+    <key id="message7">Название не изменилось</key>
+    <key id="message8">Сюда введите наименование организации, наименование структурного подразделения и территориальную принадлежность</key>
+    <key id="button3">Сохранить</key>
+    <key id="button4">Отмена</key>
+    <key id="saveAndArchive">Сохранить и запаковать</key>
+    <key id="delListToolStripMenuItem">Удалить список</key>
+  </module>
+
+  <module id="MainForm">
+    <key id="btnAddNew">Добавить еще пользователя</key>
+    <key id="button1">Сохранить и запаковать</key>
+    <key id="MainForm">Форма ввода основных данных</key>
+    <key id="message1">Список пользователей пуст - создаю новый</key>
+    <key id="message2">Были удалены записи из основого реестра введите пользователей заново</key>
+    <key id="message3">Данные пользователя</key>
+    <key id="message4">Не введены</key>
+    <key id="message5">Не верны</key>
+    <key id="message6">Введенные данные не верны</key>
+    <key id="message7">Пакет создан успешно</key>
+    <key id="message8">Список пользователей не валидный</key>
+    <key id="message9">По данному пути не был найден файл с реестром\n\rвыберите другой путь</key>
+    <key id="message10">Список не может содержать более 50 записей</key>
+  </module>
+
+  <module id="DetailForm">
+    <key id="lbName">Фамилия</key>
+    <key id="label3">Имя</key>
+    <key id="label4">Отчество</key>
+    <key id="label5">Серия паспорта</key>
+    <key id="label6">Номер паспорта</key>
+    <key id="label7">Телефон</key>
+    <key id="label8">Факс</key>
+    <key id="label2">Адрес</key>
+    <key id="label9">Кем производится оплата (полное имя физического лица или название организации)</key>
+    <key id="label19">Поля отмеченные * обязательные к заполнению</key>
+    <key id="label20">Дата рождения</key>
+    <key id="button1">Сохранить</key>
+    <key id="DetailForm">Детали пользователя</key>
+    <key id="message1">Детали пользователя отсутсвуют, создаю новые</key>
+    <key id="message2">Не все обязательные поля заполнены</key>
+    <key id="message3">Не валидные e-mail</key>
+    <key id="message4">Не была заполнена форма</key>
+    <key id="message5">Поле может содержать только цифры</key>
+    <key id="message6">Фото обязательно</key>
+    <key id="message7">Для прикрепления фотографии необходимо заполнить обязательные поля</key>
+    <key id="message8">Размер файла с изображением не может быть больше 250кБ</key>
+    <key id="message9">Поле должно состоять из букв и цифр</key>
+    <key id="label12">Место работы</key>
+    <key id="label16">Занимаемая должность</key>
+    <key id="label22">Национальность</key>
+    <key id="label28">Место рождения</key>
+    <key id="label29">Образование</key>
+    <key id="label30">Общий трудовой стаж</key>
+    <key id="label31">В том числе в должности</key>
+    <key id="label32">Награды</key>
+    <key id="label33">Имеет ли дисциплинарные взыскания</key>
+
+    <key id="radioButton1">имеет</key>
+    <key id="radioButton2">не имеет</key>
+  </module>
+
+  <module id="UserItem">
+    <key id="label1">Имя пользователя</key>
+    <key id="btnSave">Детали</key>
+    <key id="message1">Список пользователей не валидный</key>
+    <key id="message2">Введите имя пользвоателя</key>
+    <key id="message3">Поле должно состоять из цифр и буков</key>
+    <key id="message4">удалить пользователя из списка?</key>
+    <key id="message5">Подтвердите действие</key>
+    <key id="message6">Поле должно состоять из букв и цифр</key>
+    <key id="message7">Поле не может быть пустым!</key>
+    <key id="message8">Поле должно состоять из букв и цифр</key>
+  </module>
+</Translations>

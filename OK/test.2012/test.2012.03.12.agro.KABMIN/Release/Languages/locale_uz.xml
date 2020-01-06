@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Translations>
+  <module id="UserList">
+    <key id="button2">Умумий архив яратиш</key>
+    <key id="label1">Янги рўйхат яратиш</key>
+    <key id="label2">Мавжуд рўйхатлардан танлаш</key>
+    <key id="button1">Яратиш</key>
+    <key id="UserList">Рўйхатлар</key>
+    <key id="message1">Рўйхат номи мажуд рўйхат билан бир хил бўлиши мумкин эмас!</key>
+    <key id="message2">Рўйхат номини бўш қолдириш мумкин эмас!</key>
+    <key id="message3">Сиз чиндан ҳам рўйхатни йўқ қилмоқчимисиз</key>
+    <key id="message4">Йўқ қилишни тасдиқланг</key>
+    <key id="message5">Саҳифа номи ҳарфлардан ва рақамлардан ташкил топиши лозим</key>
+    <key id="uzbToolStripMenuItem1">Ўзбекча</key>
+    <key id="rusToolStripMenuItem">Русча</key>
+    <key id="chooseLangToolStripMenuItem1">Тилни танланг</key>
+    <key id="exitToolStripMenuItem">Чиқиш</key>
+    <key id="editToolStripMenuItem">Таҳрир қилиш</key>
+    <key id="about">Мазкур дастурий маҳсулот тест учун рўйхатлари тақдим этилган компания ходимлари тўғрисидаги маълумотларни тўплашни соддалаштириш учун мўлжалланган</key>
+    <key id="message6">Катак бўш қолдирилиши мумкин эмас</key>
+    <key id="message7">Номи ўзгаришсиз қолган</key>
+    <key id="message8">Бу ерга ташкилотнинг номи, таркибий тузилманинг номи ва унинг ҳудудий жиҳатдан бўйсиниши киритилади</key>
+    <key id="button3">Сақлаш</key>
+    <key id="button4">Рад этиш</key>
+    <key id="saveAndArchive">Сақлаш ва боғлаш</key>
+    <key id="delListToolStripMenuItem">Рўйҳатни йўқ қилиш</key>
+    <key id="aboutToolStripMenuItem">Дастур тўғрисида</key>
+  </module>
+
+  <module id="MainForm">
+    <key id="btnAddNew">Фойдаланувчини қўшиш</key>
+    <key id="button1">Сақлаш ва боғлаш</key>
+    <key id="MainForm">Асосий маълумотларни киритиш шакли</key>
+    <key id="message1">Фойдаланувчилар рўйхати бўш – янгисини яратаман</key>
+    <key id="message2">Асосий рўйхатдаги ёзувлар йўқ қилинган, фойдаланувчиларни янгитдан киритинг </key>
+    <key id="message3">Фойдаланувчи маълумотлари</key>
+    <key id="message4">Киритилмаган</key>
+    <key id="message5">Нотўғри</key>
+    <key id="message6">Киритилган маълумотлар тўғри эмас</key>
+    <key id="message7">Боғлам муваффақиятли яратилди</key>
+    <key id="message8">Фойдаланувчилар рўйхати валид эмас</key>
+    <key id="message9">Мазкур йўналишда\n\r рўйхатли файл топилмади, бошқа йўналишни танланг</key>
+    <key id="message10">Рўйхатга 50 дан ортиқ ёзув киритиш мумкин эмас </key>
+  </module>
+
+  <module id="DetailForm">
+    <key id="lbName">Фамилияси</key>
+    <key id="label3">Исми</key>
+    <key id="label4">Отасининг исми</key>
+    <key id="label5">Паспорт серияси</key>
+    <key id="label6">Паспорт рақами</key>
+    <key id="label7">Телефон</key>
+    <key id="label8">Факс</key>
+    <key id="label2">Манзили</key>
+    <key id="label9">Тўловни ким амлга оширмоқда (жисмоний шахснинг ёки ташкилотнинг тўлиқ номи)</key>
+    <key id="label19">* белгиси қўйилган катак тўлдилиши мажбурий</key>
+    <key id="label20">Туғилган санаси</key>
+    <key id="button1">Сақлаш</key>
+    <key id="button3">Рад этиш</key>
+    <key id="DetailForm">Фойдаланувчига оид тафсилотлар</key>
+    <key id="message1">Фойдаланувчига оид тафсилотлар йўқ, янгисини яратаман</key>
+    <key id="message2">Барча мажбурий катаклар тўлдирилмади</key>
+    <key id="message3">Валид эмас e-mail</key>
+    <key id="message4">Шакл тўлдирилмади</key>
+    <key id="message5">Катак фақат рақамлардан иборат бўлиши шарт</key>
+    <key id="message6">Фотосурат қўйилиши мажбурий</key>
+    <key id="message7">Фотосуратни ўрнатиш учун мажбурий катакларни тўлдириш шарт </key>
+    <key id="message8">Тасвир туширилган файлнинг ҳажми 300кБ дан катта бўлиши мумкин эмас</key>
+    <key id="message9">Катак ҳарфлардан ва рақамлардан ташкил топиши лозим</key>
+    <key id="label12">Иш жойи</key>
+    <key id="label16">Лавозими</key>
+    <key id="label22">Миллати</key>
+    <key id="label28">Туғилган жойи</key>
+    <key id="label29">Маълумоти</key>
+    <key id="label30">Умумий меҳнат стажи</key>
+    <key id="label31">Шу жумладан лавозимда</key>
+    <key id="label32">Мукофотлари</key>
+    <key id="label33">Интизомий жазога тортилганлиги</key>
+    <key id="radioButton1">бор</key>
+    <key id="radioButton2">йўқ</key>
+  </module>
+
+  <module id="UserItem">
+    <key id="label1">Фойдаланувчи номи</key>
+    <key id="btnSave">Тафсилотлари</key>
+    <key id="button1">Сақлаш</key>
+    <key id="message1">Фойдаланувчилар рўйхати валид эмас</key>
+    <key id="message2">Фойдаланувчининг номини критинг</key>
+    <key id="message3">Катак ҳарфлардан ва рақамлардан ташкил топиши лозим</key>
+    <key id="message4">Фойдаланувчини рўйхатдан чиқариб ташлайми?</key>
+    <key id="message5">Амални тасдиқланг</key>
+    <key id="message6">Катак ҳарфлардан ва рақамлардан ташкил топиши лозим</key>
+    <key id="message7">Катак бўш қолдирилиши мумкин эмас!</key>
+    <key id="message8">Катак ҳарфлардан ва рақамлардан ташкил топиши лозим</key>
+  </module>
+</Translations>

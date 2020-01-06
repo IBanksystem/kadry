@@ -1,0 +1,63 @@
+-- стаж год=365 дней, месяц=30 дней
+-- без учета високосных лет
+select '01.07.2013' "дата",okp.branch,okp.tabno,okp.family,
+(sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+ "всего дней",
+trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365) "лет",
+trunc((    sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)-
+    365*(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)))
+    /30) "месяцев",
+ (sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))-
+ 365*trunc((sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))/365)-
+30*trunc((    sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)-
+    365*(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)))
+    /30)     "дней",
+        (trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)) "поправка"   
+ from ok_personal okp, ok_period okpd
+ where okp.branch=okpd.branch
+ and okp.personal_code=okpd.personal_code
+ and okpd.TYPE_PERIOD_CODE in (2,3)
+ and okpd.personal_code=698
+ group by okp.branch,okp.tabno,okp.family;
+ 
+-- минус 1 день за каждые полные 4 года 
+select '01.07.2013' "дата",okp.branch,okp.tabno,okp.family,
+(sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+ "всего дней",
+trunc( (sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+)/365) "лет",
+trunc((
+((sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+)-
+(365*(trunc( (sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+)/365)))
+    )/30) "месяцев",
+((sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+-
+(365*(trunc( (sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+)/365)))
+-
+(30*(trunc((
+((sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date))
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+)-
+(365*(trunc( (sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)
+-((trunc(trunc( sum(nvl(out_office_date,to_date('01.07.2013','dd.mm.yyyy'))-in_office_date)/365)/4)))
+)/365)))
+    )/30)))
+) "дней"
+ from ok_personal okp, ok_period okpd
+ where okp.branch=okpd.branch
+ and okp.personal_code=okpd.personal_code
+ and okpd.TYPE_PERIOD_CODE in (2,3)
+ and okpd.personal_code=698
+ group by okp.branch,okp.tabno,okp.family
+ order by okp.branch,okp.tabno;
+ 

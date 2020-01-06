@@ -1,0 +1,8 @@
+
+
+@@updverok.sql
+
+sho err
+
+
+

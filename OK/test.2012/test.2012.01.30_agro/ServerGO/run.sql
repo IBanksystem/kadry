@@ -1,0 +1,20 @@
+spool c:\err.txt
+
+
+@@ok_upd20120124.sql
+commit;
+
+@@ok_upd20120126.sql
+commit;
+
+@@updverok.sql
+commit;
+
+
+SELECT 'OK_SERVICE',VERSION.GET_MODULE_VERSION('OK_SERVICE', 'PACKAGE',USER) FROM DUAL;
+
+SELECT 'OK_SERVICE2',VERSION.GET_MODULE_VERSION('OK_SERVICE2', 'PACKAGE',USER) FROM DUAL;
+
+
+
+spool off;

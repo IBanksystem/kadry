@@ -1,0 +1,16 @@
+delete from ok_stat where department_code not in (select department_code from ss_ok_department where state_notes='A');
+commit;
+delete from ok_stat where post_code not in (select post_code from ss_ok_post where state_notes='A');
+commit;
+update ok_personal set department_code=null where department_code not in (select department_code from ss_ok_department where state_notes='A');
+commit;
+update ok_personal set post_code=null where post_code not in (select post_code from ss_ok_post where state_notes='A');
+commit;
+
+
+ОТДЕЛ КАДРОВ ХАЛК БАНК
+Тохир
+-----
+
+УДАЛИЛ неактивные отделы и должности из штатного расписания
+

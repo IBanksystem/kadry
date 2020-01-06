@@ -1,0 +1,29 @@
+-- первая вставка
+spool c:\err.txt
+-- дата 
+declare
+  V_DATE_ date :=to_date('20.10.2010','dd.mm.yyyy');
+begin
+  for rec_ok in (select okp.* from ok_personal okp, SS_OK_NCI son 
+  where okp.tabno=okp.tabno
+   and okp.branch=okp.branch and okp.STATUS_CODE in (2,5)
+                    and okp.post_code=son.ok_id and son.NCI_ID=79)
+  loop
+
+
+    insert into ok_hist(BRANCH,PERSONAL_CODE,V_DATE,INS_DATE,NOM_UI,
+         TABLE_NAME,ACTION_HIST_ID,PASS_SERIYA_OLD,PASS_NUM_OLD,PASS_DATE_OLD,
+         PASS_SERIYA_NEW,PASS_NUM_NEW,PASS_DATE_NEW
+    ) values (rec_ok.BRANCH,rec_ok.PERSONAL_CODE, V_DATE_ ,SYSDATE,'09_001',
+         'OK_PERSONAL',1,rec_ok.PASS_SERIYA,rec_ok.PASS_NUM,rec_ok.PASS_DATE,
+         rec_ok.PASS_SERIYA,rec_ok.PASS_NUM,rec_ok.PASS_DATE
+    );
+  end loop;
+  
+  commit;
+  select count(*) from ok_hist;
+  
+end;  
+/
+
+spool off;  

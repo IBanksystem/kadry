@@ -1,0 +1,17 @@
+proc_check_w
+после текста
+  for rec_ok in (select okp.* from ok_personal okp, SS_OK_NCI son
+  where okp.tabno=okp.tabno --in (313) -- таб номера 1,2,3
+   and okp.branch=okp.branch and okp.STATUS_CODE in (2,5)
+                    and okp.post_code=son.ok_id and son.NCI_ID=79)
+  loop
+добавлена проверка по ОК на корсчет
+-- строка 241
+	select count(*) into cnt from ok_period where branch=rec_ok.branch and personal_code=rec_ok.personal_code
+	and post_code=rec_ok.post_code;
+        if (cnt<1)
+        then
+          err('Ошибка 241 для отчетности ИИАС,Отдел Кадров:Таб.Номер='||rec_ok.TABNO||' Отсутствуют Сведения о работе в должности');
+        end if;  
+
+
