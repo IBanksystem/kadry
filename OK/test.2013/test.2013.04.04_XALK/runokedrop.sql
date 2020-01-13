@@ -1,1 +1,0 @@
-drop table ok_education_temp;

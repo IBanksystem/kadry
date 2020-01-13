@@ -1,3 +1,0 @@
-
-@@TR_OK_PERIOD_HIST.sql
-

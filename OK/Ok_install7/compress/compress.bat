@@ -1,1 +1,0 @@
-for %%i in (.\*.bpl) do upx --compress-icons=0 %%i

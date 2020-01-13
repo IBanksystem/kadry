@@ -1,1 +1,0 @@
-@@updverok.sql

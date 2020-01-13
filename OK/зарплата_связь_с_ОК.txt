@@ -1,3 +1,0 @@
-select * from zp_s_p where id=tabnom;----обший список сотрудников 
-select * from z_an where p_id=tabnom;---атрибут сотрудника  дата приема на работу код=5 ap_id=5
-select * from z_d  where p_id=tabnom;
